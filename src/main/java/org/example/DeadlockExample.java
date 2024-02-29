@@ -31,7 +31,7 @@ public class DeadlockExample {
         thread2.start();
     }
 
-    private void acquireResourcesAndWork(Lock firstLock, Lock secondLock,
+    private synchronized void acquireResourcesAndWork(Lock firstLock, Lock secondLock,
                                          Resource firstResource, Resource secondResource,
                                          String threadName) {
 
