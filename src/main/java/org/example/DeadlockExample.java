@@ -34,6 +34,7 @@ public class DeadlockExample {
     private void acquireResourcesAndWork(Lock firstLock, Lock secondLock,
                                          Resource firstResource, Resource secondResource,
                                          String threadName) {
+
         firstLock.lock();
         System.out.println(threadName + " locked " + firstResource);
 
